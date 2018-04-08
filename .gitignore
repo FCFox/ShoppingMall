@@ -1,2 +1,5 @@
 # Object file
-obj/*
+[Oo]bj
+[Bb]in
+.vs
+*.opendb
