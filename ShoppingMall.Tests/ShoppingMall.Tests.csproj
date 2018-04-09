@@ -98,6 +98,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ShoppingMall.Domain\ShoppingMall.Domain.csproj">
+      <Project>{3199527e-72fb-4d01-b28e-b1bacf4e86b1}</Project>
+      <Name>ShoppingMall.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShoppingMall.WebUI\ShoppingMall.WebUI.csproj">
       <Project>{7E0AA1CE-101E-4F7D-B1AC-298ABCC3EC90}</Project>
       <Name>ShoppingMall.WebUI</Name>
