@@ -2,6 +2,7 @@
 {
     using ShoppingMall.Domain.Entities;
     using System;
+    using System.Collections;
     using System.Data.Entity;
     using System.Linq;
 
@@ -14,7 +15,7 @@
         //如果您想要针对其他数据库和/或数据库提供程序，请在应用程序配置文件中修改“ShoppingMallContext”
         //连接字符串。
         public ShoppingMallContext()
-            : base("name=ShoppingMallContext")
+            : base()
         {
         }
 
@@ -27,7 +28,7 @@
             //category:一对多
             modelBuilder.Entity<Category>()
                 .HasMany(c => c.Products)
-                .WithOptional() //商品不依赖种类而存在
+                .WithRequired() //商品必须有种类
                 .HasForeignKey(p => p.CategoryID)
                 .WillCascadeOnDelete(false);
             //shop:一对多

@@ -21,7 +21,7 @@ namespace ShoppingMall.Domain.Entities
         [Range(0.01,999999,ErrorMessage = "最小价格为0.01元，最大价格为999999元")]
         public decimal Price { get; set; }
         
-        public int? CategoryID { get; set; } //商品的种类
+        public int CategoryID { get; set; } //商品的种类
        
         [Required]
         public int ShopsID { get; set; }//商品所在商铺

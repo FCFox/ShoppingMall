@@ -17,7 +17,7 @@ namespace ShoppingMall.Domain.Entities
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
-        public Guid? ParentID { get; set; }//所属种类的父级
+        public int ParentID { get; set; }//所属种类的父级
     }
     public partial class Category
     {
